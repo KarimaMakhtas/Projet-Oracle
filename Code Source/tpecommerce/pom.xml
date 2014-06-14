@@ -7,6 +7,34 @@
 	<packaging>war</packaging>
 	<name>ecommerce</name>
 
+    <developers>
+        <developer>
+            <name>Radigoy Frederic</name>
+            <email></email>
+            <roles></roles>
+        </developer>
+        <developer>
+            <name>Makhtas Karima</name>
+            <email></email>
+            <roles></roles>
+        </developer>
+        <developer>
+            <name>Lloyd dingalt</name>
+            <email></email>
+            <roles></roles>
+        </developer>
+        <developer>
+            <name>Florant ferrand</name>
+            <email></email>
+            <roles></roles>
+        </developer>
+        <developer>
+            <name>Yann Cédric Moratinos</name>
+            <email></email>
+            <roles></roles>
+        </developer>
+    </developers>
+
 	<dependencies>
 		<!-- ORACLE -->
 		<dependency>
@@ -33,6 +61,22 @@
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
 		</dependency>
-
 	</dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <!-- le plugin pour démarrer TomEE depuis la ligne de commande avec maven :
+                       mvn package tomee:start
+                -->
+                <groupId>org.apache.openejb.maven</groupId>
+                <artifactId>tomee-maven-plugin</artifactId>
+                <version>1.0.1</version>
+                <configuration>
+                    <tomeeVersion>1.6.0</tomeeVersion>
+                    <tomeeClassifier>plus</tomeeClassifier>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
