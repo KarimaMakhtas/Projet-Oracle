@@ -1,16 +1,18 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 /**
- * Description of Produit
+ * Description of IProduit
  *
- * @author fredericradigoy
+ * @author frederic radigoy
  */
-class Produit {
-    //put your code here
+interface IProduit {
+    
+    public function afficherProdut();
+    public function getNomProduit();
+    public function getPrixProduit();
+    public function getDescription();
+    public function getCheminImage();  
+    
 }
